@@ -12,3 +12,6 @@ let g:ale_fixers = {
 \   'python': ['autopep8'],
 \   'rust':   ['rustfmt'],
 \}
+
+
+inoremap jk <esc>

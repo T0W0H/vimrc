@@ -257,6 +257,10 @@ vnoremap $e <esc>`>a`<esc>`<i`<esc>
 
 ### 插入模式 (Insert mode) 映射
 
+可以使用jk来退出
+```vim
+inoremap jk <esc>
+```
 快速插入圆括号/方括号等：
 ```vim
 inoremap $1 ()<esc>i
