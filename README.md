@@ -170,20 +170,25 @@ Awesome 尝试使用的其他一些字体包括：
 
 ### 普通模式 (Normal mode) 映射
 
-快速保存缓冲区 (`<leader>w`)：
+交换 j/k 和 gj/gk 的功能
+但在使用数字前缀 (如 5j, 3k) 时，保留物理移动的特性
+```vim
+nnoremap <expr> j v:count ? 'j' : 'gj'
+nnoremap <expr> k v:count ? 'k' : 'gk'
+nnoremap <expr> gj v:count ? 'gj' : 'j'
+nnoremap <expr> gk v:count ? 'gk' : 'k'
+``````
 
+快速保存缓冲区 (`<leader>w`)：
 ```vim
 nmap <leader>w :w!<cr>
 ```
-
 ~~将 `<Space>` 映射为 `/`（搜索）， `<Ctrl>+<Space>` 映射为 `?`（向后搜索）：~~
 ```vim	
 " map <space> /
 " map <C-space> ?
 ```
-
 按下 `<leader><cr>` 取消高亮：
-
 ```vim
 map <silent> <leader><cr> :noh<cr>
 ```
@@ -232,6 +237,14 @@ map <leader>pp :setlocal paste!<cr>
 
 ### 可视模式 (Visual mode) 映射
 
+交换 j/k 和 gj/gk 的功能
+但在使用数字前缀 (如 5j, 3k) 时，保留物理移动的特性
+```vim
+vnoremap <expr> j v:count ? 'j' : 'gj'
+vnoremap <expr> k v:count ? 'k' : 'gk'
+vnoremap <expr> gj v:count ? 'gj' : 'j'
+vnoremap <expr> gk v:count ? 'gk' : 'k'
+```
 在可视模式下按下 `*` 或 `#` 将搜索当前选中的内容：
 ```vim
 vnoremap <silent> * :call VisualSelection('f')<CR>
