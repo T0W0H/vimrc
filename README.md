@@ -165,7 +165,7 @@ Awesome 尝试使用的其他一些字体包括：
 
 ## 快捷键映射 (Key Mappings)
 
-[leader](http://learnvimscriptthehardway.stevelosh.com/chapters/06.html#leader) 键是 `,`，所以当你看到 `<leader>` 时，它的意思就是 `,`。
+[leader](http://learnvimscriptthehardway.stevelosh.com/chapters/06.html#leader) 键是 `空格键`，所以当你看到 `<leader>` 时，它的意思就是 `空格键`。
 
 
 ### 普通模式 (Normal mode) 映射
@@ -176,11 +176,13 @@ Awesome 尝试使用的其他一些字体包括：
 nmap <leader>w :w!<cr>
 ```
 
-将 `<Space>` 映射为 `/`（搜索）， `<Ctrl>+<Space>` 映射为 `?`（向后搜索）：
+~~将 `<Space>` 映射为 `/`（搜索）， `<Ctrl>+<Space>` 映射为 `?`（向后搜索）：
 ```vim	
 map <space> /
 map <C-space> ?
 ```
+~~
+
 按下 `<leader><cr>` 取消高亮：
 
 ```vim
