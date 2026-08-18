@@ -178,8 +178,8 @@ nmap <leader>w :w!<cr>
 
 ~~将 `<Space>` 映射为 `/`（搜索）， `<Ctrl>+<Space>` 映射为 `?`（向后搜索）：~~
 ```vim	
-map <space> /
-map <C-space> ?
+" map <space> /
+" map <C-space> ?
 ```
 
 按下 `<leader><cr>` 取消高亮：
