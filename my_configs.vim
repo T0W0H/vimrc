@@ -1,10 +1,17 @@
-set relativenumber
+set number relativenumber
 set cursorline
 set clipboard=unnamedplus
 set mouse=a
 
-" 光标行用淡背景高亮，去掉下划线（避免和代码里的 _ 混淆）
-hi CursorLine gui=NONE guibg=#3a3a3a cterm=NONE ctermbg=236
+" " 光标行用淡背景高亮，去掉下划线（避免和代码里的 _ 混淆）
+" hi CursorLine gui=NONE guibg=#3a3a3a cterm=NONE ctermbg=236
+
+" 保持当前行背景透明，去除下划线
+hi clear CursorLine
+hi CursorLine cterm=NONE gui=NONE guibg=NONE ctermbg=NONE
+
+" 高亮当前行的行号（例如加粗黄色）
+hi CursorLineNr cterm=bold ctermfg=Yellow gui=bold guifg=Yellow
 
 " ==================================================
 " 强制 Vim 背景透明，使其完美融入终端背景
@@ -32,7 +39,9 @@ let g:ale_fixers = {
 \}
 
 
+" 插入模式下可以使用jk来退出
 inoremap jk <esc>
+
 " 交换 j/k 和 gj/gk 的功能
 " 但在使用数字前缀 (如 5j, 3k) 时，保留物理移动的特性
 nnoremap <expr> j v:count ? 'j' : 'gj'
