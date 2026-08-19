@@ -6,6 +6,24 @@ set mouse=a
 " 光标行用淡背景高亮，去掉下划线（避免和代码里的 _ 混淆）
 hi CursorLine gui=NONE guibg=#3a3a3a cterm=NONE ctermbg=236
 
+" ==================================================
+" 强制 Vim 背景透明，使其完美融入终端背景
+" ==================================================
+" 清除普通文本背景
+hi Normal ctermbg=NONE guibg=NONE
+" 清除文件末尾（~符号）的背景
+" hi NonText ctermbg=NONE guibg=NONE
+" hi EndOfBuffer ctermbg=NONE guibg=NONE
+" 清除行号列的背景
+" hi LineNr ctermbg=NONE guibg=NONE
+" hi CursorLineNr ctermbg=NONE guibg=NONE
+" 清除左侧标志列（如 GitGutter 等）的背景
+" hi SignColumn ctermbg=NONE guibg=NONE
+" 清除垂直分割线的背景
+" hi VertSplit ctermbg=NONE guibg=NONE
+
+
+
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   'cpp':    ['clang-format'],
