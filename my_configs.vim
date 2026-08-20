@@ -3,6 +3,9 @@ set cursorline
 set clipboard=unnamedplus
 set mouse=a
 
+" 文件内 / 搜索时显示匹配位置 [当前/总数]（需 Vim 8.1.1278+）
+set shortmess-=S
+
 " " 光标行用淡背景高亮，去掉下划线（避免和代码里的 _ 混淆）
 " hi CursorLine gui=NONE guibg=#3a3a3a cterm=NONE ctermbg=236
 
